@@ -566,7 +566,20 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- gopls = {},
+        gopls = {},
+        ruff = {},
+        ruff_lsp = {},
+        bashls = {},
+        emmet_language_server = {},
+        goimports = {},
+        intelephense = {},
+        isort = {},
+        jq = {},
+        markdownlint = {},
+        prettier = {},
+        sqls = {},
+        tailwindcss = {},
+
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -575,7 +588,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
+        tsserver = {},
         --
 
         lua_ls = {
