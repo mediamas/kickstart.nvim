@@ -1,3 +1,7 @@
 return {
-  'github/copilot.vim',
+  {
+    'github/copilot.vim',
+    cmd = 'Copilot',
+    event = 'BufEnter',
+  },
 }

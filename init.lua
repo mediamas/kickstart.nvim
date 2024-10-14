@@ -167,6 +167,28 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Custom keymaps
+
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_no_insert_map = true
+vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', { expr = true, noremap = true, silent = true, desc = 'Accept Copilot' })
+
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+
+-- PopUp window for CopilotChat
+-- local chat = require 'CopilotChat'
+--
+-- local map = vim.keymap.set
+--
+-- map('n', '<Leader>cc', function()
+--   chat.toggle {
+--     window = {
+--       layout = 'float',
+--       title = 'Copilot Chat',
+--     },
+--   }
+-- end, { desc = 'Toggle Copilot Chat' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
