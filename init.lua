@@ -175,20 +175,6 @@ vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', { expr = true, n
 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
--- PopUp window for CopilotChat
--- local chat = require 'CopilotChat'
---
--- local map = vim.keymap.set
---
--- map('n', '<Leader>cc', function()
---   chat.toggle {
---     window = {
---       layout = 'float',
---       title = 'Copilot Chat',
---     },
---   }
--- end, { desc = 'Toggle Copilot Chat' })
-
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -946,5 +932,17 @@ require('lazy').setup({
   },
 })
 
+-- PopUp window for CopilotChat
+local chat = require 'CopilotChat'
+local map = vim.keymap.set
+
+map('n', '<Leader>cc', function()
+  chat.toggle {
+    window = {
+      layout = 'float',
+      title = 'Copilot Chat',
+    },
+  }
+end, { desc = 'Toggle Copilot Chat' })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -6,10 +6,11 @@ return {
       { 'github/copilot.vim' }, -- or github/copilot.vim
       { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
     },
+    build = 'make tiktoken',
     opts = {
       debug = true, -- Enable debugging
       -- See Configuration section for rest
     },
-    event = 'BufEnter',
+    -- event = 'BufEnter',
   },
 }
