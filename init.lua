@@ -154,6 +154,11 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Set tab width to 4 spaces
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -944,5 +949,13 @@ map('n', '<Leader>cc', function()
     },
   }
 end, { desc = 'Toggle Copilot Chat' })
+-- Show TODO
+map('n', '<Leader>st', ':TodoTelescope<CR>', { desc = 'Show TODO' })
+
+-- Jump to the next buffer
+map('n', '<Tab>', ':bnext<CR>', { desc = 'Next buffer' })
+
+-- Jump to the previous buffer
+map('n', '<S-Tab>', ':bprevious<CR>', { desc = 'Previous buffer' })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
