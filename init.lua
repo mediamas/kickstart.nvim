@@ -953,10 +953,10 @@ end, { desc = 'Toggle Copilot Chat' })
 map('n', '<Leader>st', ':TodoTelescope<CR>', { desc = 'Show TODO' })
 
 -- Jump to the next buffer
-map('n', '<Tab>', ':BufferlineMoveNext<CR>', { desc = 'Next buffer' })
+map('n', '<Tab>', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
 
 -- Jump to the previous buffer
-map('n', '<S-Tab>', ':BufferlineMovePrev<CR>', { desc = 'Previous buffer' })
+map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
 -- Close a buffer
 map('n', '<leader>bc', ':bdelete<CR>', { desc = 'Close buffer' })
 -- The line beneath this is called `modeline`. See `:help modeline`
