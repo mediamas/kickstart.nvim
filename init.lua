@@ -178,6 +178,9 @@ vim.g.copilot_no_tab_map = true
 vim.g.copilot_no_insert_map = true
 vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', { expr = true, noremap = true, silent = true, desc = 'Accept Copilot' })
 
+-- Remap ' to ; in normal mode to jump to marks
+vim.keymap.set('n', ';', "'", { desc = 'Jump to mark' })
+
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
