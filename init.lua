@@ -586,7 +586,6 @@ require('lazy').setup({
         -- clangd = {},
         gopls = {},
         ruff = {},
-        ruff_lsp = {},
         bashls = {},
         emmet_language_server = {},
         goimports = {},
