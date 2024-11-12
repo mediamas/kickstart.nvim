@@ -179,7 +179,7 @@ vim.g.copilot_no_insert_map = true
 vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', { expr = true, noremap = true, silent = true, desc = 'Accept Copilot' })
 
 -- Remap ' to ; in normal mode to jump to marks
-vim.keymap.set('n', ';', "'", { desc = 'Jump to mark' })
+-- vim.keymap.set('n', ';', "'", { desc = 'Jump to mark' })
 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
