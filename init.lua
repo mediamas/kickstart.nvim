@@ -836,6 +836,11 @@ require('lazy').setup({
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
 
+      -- Mini
+      require('mini.comment').setup()
+      require('mini.jump').setup()
+      require('mini.jump2d').setup()
+
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
@@ -910,13 +915,6 @@ require('lazy').setup({
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-  -- Mini
-  require('mini.ai').setup(),
-  require('mini.surround').setup(),
-  require('mini.comment').setup(),
-  require('mini.jump').setup(),
-  require('mini.jump2d').setup(),
-  require('mini.surround').setup(),
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
