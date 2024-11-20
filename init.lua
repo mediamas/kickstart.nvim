@@ -913,6 +913,10 @@ require('lazy').setup({
   -- Mini
   require('mini.ai').setup(),
   require('mini.surround').setup(),
+  require('mini.comment').setup(),
+  require('mini.jump').setup(),
+  require('mini.jump2d').setup(),
+  require('mini.surround').setup(),
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
