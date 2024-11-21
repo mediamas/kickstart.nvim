@@ -16,4 +16,14 @@ return {
       vim.keymap.set('n', '<C-Space>', nvim_tmux_nav.NvimTmuxNavigateNext)
     end,
   },
+  {
+    'norcalli/nvim-terminal.lua',
+  },
+  {
+    'camgraff/telescope-tmux.nvim',
+    requires = { 'nvim-telescope/telescope.nvim', 'norcalli/nvim-terminal.lua' },
+    config = function()
+      require('terminal').setup()
+    end,
+  },
 }
