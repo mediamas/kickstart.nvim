@@ -684,6 +684,9 @@ require('lazy').setup({
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
         python = { 'ruff' },
+        blade = { 'prettierd', 'prettier' },
+        html = { 'prettierd', 'prettier' },
+        go = { 'gofmt', 'goimports' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
