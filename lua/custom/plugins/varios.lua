@@ -6,6 +6,5 @@ return {
       vim.cmd.colorscheme 'dracula'
     end,
   },
-  'ptzz/lf.vim',
   'voldikss/vim-floaterm',
 }
