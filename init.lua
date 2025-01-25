@@ -594,6 +594,7 @@ require('lazy').setup({
         jq = {},
         markdownlint = {},
         prettier = {},
+        prettierd = {},
         sqls = {},
         tailwindcss = {},
 
@@ -637,6 +638,20 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'eslint', -- Used to format JavaScript code
+        'ruff', -- Used to format Python code
+        'prettier', -- Used to format JavaScript code
+        'prettierd', -- Used to format JavaScript code
+        'gopls', -- Used for Go development
+        'goimports', -- Used for Go development
+        'eslint', -- Used for JavaScript development
+        'sqls', -- Used for SQL development
+        'tailwindcss', -- Used for Tailwind CSS development
+        'emmet_language_server', -- Used for HTML/CSS development
+        'jq', -- Used for JSON development
+        'markdownlint', -- Used for Markdown development
+        'isort', -- Used for Python development
+        'bashls', -- Used for Bash development
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -683,14 +698,21 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'ruff' },
-        blade = { 'prettierd', 'prettier' },
-        html = { 'prettierd', 'prettier' },
-        go = { 'gofmt', 'goimports' },
+        -- python = { 'ruff' },
+        -- blade = { 'prettierd', 'prettier' },
+        -- html = { 'prettierd', 'prettier' },
+        -- go = { 'gofmt', 'goimports' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        javascript = { { 'prettierd', 'prettier' } },
+        -- javascript = { { 'prettierd', 'prettier' } },
+        python = { 'ruff' },
+        blade = { 'prettierd', 'prettier' },
+        javascript = { 'prettierd', 'prettier' },
+        html = { 'prettier' },
+        typescript = { 'prettierd', 'prettier' },
+        typescriptrc = { 'prettierd', 'prettier' },
+        go = { 'gopls', 'goimports' },
       },
     },
   },
